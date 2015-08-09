@@ -1,6 +1,7 @@
 {application, 'firstapp',
  [{description, "An OTP application"},
   {vsn, "0.1.0"},
+  {id, "git"},
   {registered, []},
   {mod, {'firstapp_app', []}},
   {applications,
