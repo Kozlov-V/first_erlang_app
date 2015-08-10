@@ -9,7 +9,7 @@
     stdlib,
     cowboy
    ]},
-  {env, [{http_port, 8080}]},
+  {env, []},
   {modules, []},
 
   {contributors, []},
