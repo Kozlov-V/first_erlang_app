@@ -1,1 +1,1 @@
-web: erl -pa ebin -env ERL_LIBS deps -s firstapp -noshell -noinput
+web: _build/default/rel/firstapp_release/bin/firstapp_release foreground
