@@ -23,7 +23,7 @@ start_link() ->
 %% gen_server callbacks
 init([]) ->
   Dispatch = cowboy_router:compile([{'_', routes() }]),
-  Port = list_to_integer(os:getenv("PORT")),
+  Port = port(),
   lager:info("starting Cowboy server on http://localhost:~b", [Port]),
   {ok, _} = cowboy:start_http(firstapp_http_listener, 100, [{port, Port}],
                                [{env, [{dispatch, Dispatch}]}]
@@ -49,6 +49,12 @@ code_change(_OldVsn, State, _Extra) ->
   {ok, State}.
 
 %% Internal functions
+port() ->
+  case os:getenv("PORT") of
+    false -> 8080;
+    Value -> list_to_integer(Value)
+  end.
+
 routes() ->
   [
     {"/[...]", cowboy_static, {priv_dir, firstapp, <<"www">>}}
