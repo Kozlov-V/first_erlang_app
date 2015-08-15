@@ -6,6 +6,7 @@
   {mod, {'firstapp_app', []}},
   {applications,
    [kernel,
+    jsx,
     stdlib,
     lager,
     cowboy

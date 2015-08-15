@@ -1,4 +1,5 @@
 [{<<"goldrush">>,{pkg,<<"goldrush">>,<<"0.1.6">>},1},
+ {<<"jsx">>,{pkg,<<"jsx">>,<<"2.7.0">>},0},
  {<<"lager">>,{pkg,<<"lager">>,<<"2.1.1">>},0},
  {<<"ranch">>,
   {git,"https://github.com/ninenines/ranch.git",
